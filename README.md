@@ -43,11 +43,17 @@ $$\begin{align}
 \gamma &= \text{Recovery Rate}\\
 \end{align}$$
 
-i.e. $\beta$ controls the rate of spread which represents the probability of transmitting disease between a susceptible and an infectious individual and $\sigma$ is the rate of latent individuals becoming infectious.  A closed population with no births or deaths is assumed. 
+This means that $\beta \, \sigma$ represent the rate of spread which represents the probability of transmitting disease between a susceptible and an infectious individual and the rate of latent individuals becoming infectious respectively. A closed population with no births or deaths is assumed. 
 
 
 ## Differential evolution
-The differential evolution package PDE_params estimates the best candidates for the parameters $\beta$, $\gamma$ of the SIR model and the parameters $\beta$, $\sigma$, $\gamma$ of the SEIR model. The corresponding values are $\beta=0.0278$, $\gamma=0.0102$ and $\beta=0.258$, $\gamma=0.013$, $\sigma=0.003$ for the SIR and SEIR model respectively. With these constants, we can integrate the system of ODEs and estimate the curves for the evolution of the new cases and the deceased/recovered individuals as seen in the next figure for the SIR model. For the SEIR Model check the Jupyter notebook on this repository, it is very similar. 
+The differential evolution package PDE_params estimates the best candidates for the scalar parameters of the above models. The values are
+
+$$\begin{align*}
+\beta=0.0278 \,& \gamma=0.0102 \\ 
+\beta=0.258 \, \gamma&=0.013 \, \sigma=0.003 \end{align*}$$ 
+
+for the SIR and SEIR model respectively. Once these values are known, we integrate the system of ODEs and estimate the curves for the evolution of the new cases and the deceased/recovered individuals as seen in the next figure for the SIR model. For the SEIR Model check the Jupyter notebook on this repository, it is very similar. 
 
 <img src = "images/SIR.png">
 
