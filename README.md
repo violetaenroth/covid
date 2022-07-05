@@ -43,11 +43,11 @@ $$\begin{align}
 \gamma &= \text{Recovery Rate}\\
 \end{align}$$
 
-i.e. $\\beta$ controls the rate of spread which represents the probability of transmitting disease between a susceptible and an infectious individual and $\\sigma$ is the rate of latent individuals becoming infectious. A closed population with no births or deaths is assumed. 
+i.e. $\beta$ controls the rate of spread which represents the probability of transmitting disease between a susceptible and an infectious individual and $\sigma$ is the rate of latent individuals becoming infectious.  A closed population with no births or deaths is assumed. 
 
 
 ## Differential evolution
-The differential evolution package PDE_params estimates the best candidates for the parameters $\\beta$, $\\gamma$ of the SIR model and the parameters $\\beta$, $\\sigma$, $\\gamma$ of the SEIR model. The corresponding values are $\\beta=$, $\\gamma=$ for the SIR model and With these constants, we can integrate the system of ODE of each models and estimate the curves for the evolution of the new cases and the deceased/recovered individuals. 
+The differential evolution package PDE_params estimates the best candidates for the parameters $\beta$, $\gamma$ of the SIR model and the parameters $\beta$, $\sigma$, $\gamma$ of the SEIR model. The corresponding values are $\beta=0.0278$, $\gamma=0.0102$ and $\beta=0.258$, $\gamma=0.013$, $\sigma=0.003$ for the SIR and SEIR model respectively. With these constants, we can integrate the system of ODE of each model and estimate the curves for the evolution of the new cases and the deceased/recovered individuals as seen in the next figure. 
 
 
 It is clear from the above plots that the evolution of Covid-19 is too complex to be capture accurately with such simple models. However, if we limit ourselves to the first 28 days of the pandemic and fit again differenti
